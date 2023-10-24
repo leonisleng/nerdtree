@@ -25,6 +25,12 @@ function! nerdtree#ui_glue#createDefaultBindings() abort
     call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapPreview, 'scope': 'Bookmark', 'callback': s.'previewBookmark' })
     call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapActivateNode, 'scope': 'all', 'callback': s.'activateAll' })
 
+    call NERDTreeAddKeyMap({ 'key': 'l', 'scope': 'DirNode', 'callback': s.'activateDirNode' })
+    call NERDTreeAddKeyMap({ 'key': 'l', 'scope': 'FileNode', 'callback': s.'activateFileNode' })
+    call NERDTreeAddKeyMap({ 'key': 'l', 'scope': 'Bookmark', 'callback': s.'activateBookmark' })
+    call NERDTreeAddKeyMap({ 'key': 'l', 'scope': 'Bookmark', 'callback': s.'previewBookmark' })
+    call NERDTreeAddKeyMap({ 'key': 'l', 'scope': 'all', 'callback': s.'activateAll' })
+
     call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapOpenSplit, 'scope': 'FileNode', 'callback': s.'openHSplit' })
     call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapOpenSplit, 'scope': 'Bookmark', 'callback': s.'openHSplitBookmark' })
     call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapOpenVSplit, 'scope': 'FileNode', 'callback': s.'openVSplit' })
